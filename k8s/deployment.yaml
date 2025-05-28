@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: java-ci-cd
+  name: java-ci-cd
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: java-ci-cd
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: java-ci-cd
+    spec:
+      containers:
+      - image: pavanthumati/java-ci-cd
+        name: pavanthumati
+        resources: {}
+status: {}
